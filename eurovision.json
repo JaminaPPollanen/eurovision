@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "country": "Finland",
+        "semifinal": 2,
+        "draw": 14,
+        "artist": "Blind Channel",
+        "song": "Dark Side"
+    },
+    {
+        "id": 1,
+        "country": "Lithuania",
+        "semifinal": 1,
+        "draw": 1,
+        "artist": "The Roop",
+        "song": "Discoteque"
+    },
+    {
+        "id": 2,
+        "country": "Slovenia",
+        "semifinal": 1,
+        "draw": 2,
+        "artist": "Ana Soklic",
+        "song": "Amen"
+    },
+    {
+        "id": 3,
+        "country": "Russia",
+        "semifinal": 1,
+        "draw": 3,
+        "artist": "Manizha",
+        "song": "Russian Woman"
+    }
+]
