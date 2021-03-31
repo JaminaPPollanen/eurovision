@@ -30,5 +30,109 @@
         "draw": 3,
         "artist": "Manizha",
         "song": "Russian Woman"
+    },
+    {
+        "id": 4,
+        "country": "Ruotsi",
+        "semifinal": 1,
+        "draw": 4,
+        "artist": "Tusse",
+        "song": "Voices"
+    },
+    {
+        "id": 5,
+        "country": "Australia",
+        "semifinal": 1,
+        "draw": 5,
+        "artist": "Montaigne",
+        "song": "Technicolour"
+    },
+    {
+        "id": 6,
+        "country": "Pohjois-Makedonia",
+        "semifinal": 1,
+        "draw": 6,
+        "artist": "Vasil",
+        "song": "Here I stand"
+    },
+    {
+        "id": 7,
+        "country": "Irlanti",
+        "semifinal": 1,
+        "draw": 7,
+        "artist": "Lesley Roy",
+        "song": "Maps"
+    },
+    {
+        "id": 8,
+        "country": "Kypros",
+        "semifinal": 1,
+        "draw": 8,
+        "artist": "Elena Tsagrinou",
+        "song": "El diablo"
+    },
+    {
+        "id": 9,
+        "country": "Norja",
+        "semifinal": 1,
+        "draw": 9,
+        "artist": "TIX",
+        "song": "Fallen Angle"
+    },
+    {
+        "id": 10,
+        "country": "Kroatia",
+        "semifinal": 1,
+        "draw": 10,
+        "artist": "Albina",
+        "song": "Tick-Tock"
+    },
+    {
+        "id": 11,
+        "country": "Belgia",
+        "semifinal": 1,
+        "draw": 11,
+        "artist": "Hooverphonic",
+        "song": "The Wrong Place"
+    },
+    {
+        "id": 12,
+        "country": "Israel",
+        "semifinal": 1,
+        "draw": 12,
+        "artist": "Eden Alene",
+        "song": "Set Me Free"
+    },
+    {
+        "id": 13,
+        "country": "Romania",
+        "semifinal": 1,
+        "draw": 13,
+        "artist": "Roxen",
+        "song": "Amnesia"
+    },
+    {
+        "id": 14,
+        "country": "Azerbaidzan",
+        "semifinal": 1,
+        "draw": 14,
+        "artist": "Efendi",
+        "song": "Mata Hari"
+    },
+    {
+        "id": 15,
+        "country": "Ukraina",
+        "semifinal": 1,
+        "draw": 15,
+        "artist": "Go_A",
+        "song": "Sum"
+    },
+    {
+        "id": 16,
+        "country": "Malta",
+        "semifinal": 1,
+        "draw": 16,
+        "artist": "Destiny",
+        "song": "Je me casse"
     }
 ]

@@ -1,44 +1,63 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet} from "react-native";
 import * as eurovisionData from '../eurovision.json';
+import { ListItem} from 'react-native-elements';
 
-export default function FirstSemiFinal() {
+
+function FirstSemiFinal() {
 
 const data = eurovisionData;
 
 console.log(data[3].country);
 
-    return(
-        <View style={styles.container}>
-            <Text>Tämä on ensimmäisen semifinaalin esiintyjien esiintymisjärjestys</Text>
-                <View style={styles.listcontainer}>
-                    <FlatList
-                    renderItem={({item}) => 
-                    <Text>{item.country}</Text>}
-                    keyExtractor={item => item.id}
-                    data={data}
-                    />
-                </View>
-        </View>
-    )
+renderItem = ({ item }) => (
+    <ListItem>
+      <ListItem.Content>
+        <ListItem.Title>{item.country}</ListItem.Title>
+      </ListItem.Content>
+      <ListItem.Chevron/>
+    </ListItem>
+  )
+  
+return(
+    <View style={styles.container}>
+        <Text>Tämä on ensimmäisen semifinaalin esiintyjien esiintymisjärjestys</Text>
+            <View style={styles.container}>
+                <FlatList
+                data={data}
+                renderItem={renderItem}
+                keyExtractor={(item, index ) => index.toString()}
+                />
+            </View>
+    </View>
+)
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#73a0c1',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title: {
-          fontSize: 20,
-          textAlign: 'center',
-          paddingBottom: 10,
-          fontWeight: 'bold'
-    },
-    listcontainer: {
-      flex: 2,
+      flex: 1,
+      backgroundColor: '#729FBE',
       alignItems: 'center',
       justifyContent: 'center',
-      color: "red"
+      fontFamily: 'Palatino-Bold'
+    },
+    title: {
+        fontSize: 25,
+        textAlign: 'center',
+        paddingBottom: 10,
+        fontWeight: 'bold',
+        color: '#fffeff',
+        fontFamily: 'Palatino-Bold'
+    },
+    btnstyle: {
+        height: 40, 
+        width: "90%", 
+        borderColor: '#4C232B',   
+        borderWidth: 2, 
+        borderRadius: 10,  
+        marginBottom: 10, 
+        fontSize: 18, 
+        backgroundColor: '#C9E2F3',
+        fontFamily: 'Palatino-Bold'
     }
   });
+export default FirstSemiFinal;
