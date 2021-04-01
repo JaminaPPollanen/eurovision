@@ -8,9 +8,9 @@ function FirstSemiFinal() {
 
 const data = eurovisionData;
 
-console.log(data[3].country);
+console.log(data);
 
-renderItem = ({ item }) => (
+const renderItem = ({ item }) => (
     <ListItem>
       <ListItem.Content>
         <ListItem.Title>{item.country}</ListItem.Title>
@@ -36,8 +36,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#729FBE',
-      alignItems: 'center',
-      justifyContent: 'center',
       fontFamily: 'Palatino-Bold'
     },
     title: {
