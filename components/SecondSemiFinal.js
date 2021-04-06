@@ -1,25 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet} from "react-native";
-import * as eurovisionData from '../eurovision.json';
+import * as eurovisionData from '../eurovision2.json';
+import { ListItem, Avatar} from 'react-native-elements';
+import CountDown from 'react-native-countdown-component';
 
-export default function SecondSemiFinal() {
-    
-    const data = eurovisionData;
 
-    console.log(data[11].country);
-    return(
-        <View style={styles.container}> 
-            <Text>Tämä on toisen semifinaalin esiintyjien esiintymisjärjestys</Text>
+function SecondSemiFinal() {
+const diff = new Date("May 20, 2021").getTime() - new Date().getTime();
+const daysTillFinal = (diff / (1000)) + 75600; //Adding missing 21 hours to starting time
+const data = Object.values(eurovisionData);
+
+const renderItem = ({ item }) => (
+    <ListItem 
+      bottomDivider
+      containerStyle={{backgroundColor: "#060a2f"}}>
+      <Avatar source={{uri: item.flag}} height={24} width={40}/>
+      <ListItem.Content >
+        <ListItem.Title style={{fontFamily: 'Palatino-Bold', color: "white"}}>{item.draw}</ListItem.Title>
+        <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>{item.country}</ListItem.Subtitle>
+      </ListItem.Content>
+    </ListItem>
+  )
+  
+return(
+    <View style={styles.container}>
+      <View>
+        <Text style={styles.title}>Toisen semifinaalin alkuun:</Text>
+        <CountDown
+            style={{alignItems: 'center'}}
+            until={daysTillFinal}
+            onFinish={() => alert('Toinen semifinaali alkaa!')}
+            onPress={() => alert('Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen toiseen semifinaaliin!')}
+            digitStyle={{backgroundColor: '#fffeff', borderWidth: 2, borderColor: '#fffeff'}}
+            digitTxtStyle={{color: '#0251c1'}}
+            timeLabelStyle={{color: "#fffeff", paddingBottom: 20}}
+            size={23}
+        />
+      </View>  
+      <Text style={styles.text}>Euroviisujen toinen semifinaali pidetään torstaina 20.05.2021 klo 21 alkaen. Tässä esittelemme toisen semifinaalin arvotun esiintymisjärjestyksen:</Text>
+        <View style={styles.listcontainer}>
+            <FlatList
+            data={data}
+            renderItem={renderItem}
+            keyExtractor={(item, index ) => index.toString()}
+            />
         </View>
-    )
+    </View>
+)
 }
-
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#729FBE',
-      alignItems: 'center',
-      justifyContent: 'center',
+      backgroundColor: '#060a2f',
       fontFamily: 'Palatino-Bold'
     },
     title: {
@@ -28,7 +60,14 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         fontWeight: 'bold',
         color: '#fffeff',
-        fontFamily: 'Palatino-Bold'
+        fontFamily: 'Palatino-Bold',
+        paddingTop: 20
+    },
+    text: {
+      color:"white", 
+      textAlign:"center", 
+      fontSize: 16,
+      fontFamily: 'Palatino-Bold'
     },
     btnstyle: {
         height: 40, 
@@ -40,5 +79,9 @@ const styles = StyleSheet.create({
         fontSize: 18, 
         backgroundColor: '#C9E2F3',
         fontFamily: 'Palatino-Bold'
+    },
+    listcontainer: {
+      flex: 4
     }
   });
+export default SecondSemiFinal;

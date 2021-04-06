@@ -13,8 +13,8 @@ function Index({navigation}){
         <View style={styles.container}> 
              <View style={styles.container}>
                 <Image
-                    style={{alignItems: 'center', width: 300, height: 118 }}
-                    source={require('./images/eurovisionlogo1.png')}
+                    style={{alignItems: 'center', width: 300, height: 116 }}
+                    source={require('./images/valkoinenlogo.png')}
                     PlaceholderContent={<ActivityIndicator/>}
                 />
             </View>
@@ -25,31 +25,33 @@ function Index({navigation}){
                     until={daysTillFinal}
                     onFinish={() => alert('Finaali alkaa!')}
                     onPress={() => alert('Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen finaaliin!')}
-                    digitStyle={{backgroundColor: '#fffeff', borderWidth: 2, borderColor: '#4C232B'}}
-                    digitTxtStyle={{color: '#195F97'}}
+                    digitStyle={{backgroundColor: '#fffeff', borderWidth: 2, borderColor: '#fffeff'}}
+                    digitTxtStyle={{color: '#0251c1'}}
+                    timeLabelStyle={{color: "#fffeff", fontFamily: 'Palatino-Bold'}}
                     size={25}
                 />
             </View>
             <View style={styles.container}>
                 <View style={styles.btnstyle}>
                     <Button 
-                        color="#4C232B"
+                        color="#f00d0d"
                         fontFamily= 'Palatino-Bold'
-                        title="Esiintyjät"
+                        title="  Esiintyjät                              "
                         onPress={() => navigation.navigate('Esiintyjat')}
                     />
                 </View>
                 <View style={styles.btnstyle}>
                     <Button
-                        color="#4C232B"
-                        title="Ensimmäinen semifinaali"
+                        color="#f00d0d"
+                        title="Ensimmäinen semifinaali     "
                         onPress={() => navigation.navigate('FirstSemiFinal')}
                     />
                 </View>
                 <View style={styles.btnstyle}>
                     <Button
-                        color="#4C232B"
-                        title="Toinen semifinaali"
+                        fontFamily= 'Palatino-Bold'
+                        color="#f00d0d"      
+                        title="Toinen semifinaali                "
                         onPress={() => navigation.navigate('SecondSemiFinal')}
                     />
                 </View>
@@ -60,7 +62,7 @@ function Index({navigation}){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#729FBE',
+      backgroundColor: '#060a2f',
       alignItems: 'center',
       justifyContent: 'center',
       fontFamily: 'Palatino-Bold'
@@ -75,13 +77,12 @@ const styles = StyleSheet.create({
     },
     btnstyle: {
         height: 40, 
-        width: "90%", 
-        borderColor: '#4C232B',   
-        borderWidth: 2, 
-        borderRadius: 10,  
+        borderColor: '#070505',   
+        borderWidth: 1, 
+        borderRadius: 8,  
         marginBottom: 10, 
-        fontSize: 18, 
-        backgroundColor: '#C9E2F3',
+        fontSize: 17, 
+        backgroundColor: '#fffeff',
         fontFamily: 'Palatino-Bold'
     }
   });

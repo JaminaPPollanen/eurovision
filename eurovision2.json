@@ -1,0 +1,164 @@
+[
+    {
+        "id": 17,
+        "country": "San Marino",
+        "semifinal": 2,
+        "draw": 1,
+        "artist": "Senhit",
+        "song": "Adrenalina",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/45px-Flag_of_San_Marino.svg.png"
+    
+    },
+    {
+        "id": 18,
+        "country": "Viro",
+        "semifinal": 2,
+        "draw": 2,
+        "artist": "Uku Suviste",
+        "song": "The Lucky One",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/45px-Flag_of_Estonia.svg.png"
+    
+    },
+    {
+        "id": 19,
+        "country": "Tsekki",
+        "semifinal": 2,
+        "draw": 3,
+        "artist": "Benny Cristo",
+        "song": "Omaga",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png"
+    
+    },
+    {
+        "id": 19,
+        "country": "Kreikka",
+        "semifinal": 2,
+        "draw": 4,
+        "artist": "Stefania",
+        "song": "Last Dance",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/45px-Flag_of_Greece.svg.png"
+    
+    },
+    {
+        "id": 20,
+        "country": "Itävalta",
+        "semifinal": 2,
+        "draw": 5,
+        "artist": "Vincet Bueno",
+        "song": "Amen",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png"
+    
+    },
+    {
+        "id": 21,
+        "country": "Puola",
+        "semifinal": 2,
+        "draw": 6,
+        "artist": "Rafal",
+        "song": "The Ride",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/45px-Flag_of_Poland.svg.png"
+    
+    },
+    {
+        "id": 22,
+        "country": "Moldova",
+        "semifinal": 2,
+        "draw": 7,
+        "artist": "Natalia Gordienko",
+        "song": "Sugar",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/45px-Flag_of_Moldova.svg.png"
+    
+    },
+    {
+        "id": 23,
+        "country": "Islanti",
+        "semifinal": 2,
+        "draw": 8,
+        "artist": "Daði & Gagnamagnið",
+        "song": "10 Years",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/45px-Flag_of_Iceland.svg.png"
+    
+    },
+    {
+        "id": 24,
+        "country": "Serbia",
+        "semifinal": 2,
+        "draw": 9,
+        "artist": "Hurricane",
+        "song": "Loco Loco",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/45px-Flag_of_Serbia.svg.png"
+    },
+    {
+        "id": 25,
+        "country": "Georgia",
+        "semifinal": 2,
+        "draw": 10,
+        "artist": "Tornike Kipiani",
+        "song": "You",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/45px-Flag_of_Georgia.svg.png"
+    },
+    {
+        "id": 26,
+        "country": "Albania",
+        "semifinal": 2,
+        "draw": 11,
+        "artist": "Anxhela Peristeri",
+        "song": "Karma",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/45px-Flag_of_Albania.svg.png"
+    },
+    {
+        "id": 27,
+        "country": "Portugali",
+        "semifinal": 2,
+        "draw": 12,
+        "artist": "The Black Mamba",
+        "song": "Love Is on My Side",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/45px-Flag_of_Portugal.svg.png"
+    },
+    {
+        "id": 28,
+        "country": "Bulgaria",
+        "semifinal": 2,
+        "draw": 13,
+        "artist": "Victoria",
+        "song": "Growing Up Is Getting Old",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/45px-Flag_of_Bulgaria.svg.png"
+    },
+    {
+        "id": 29,
+        "country": "Suomi",
+        "semifinal": 2,
+        "draw": 14,
+        "artist": "Blind Channel",
+        "song": "Dark Side",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/45px-Flag_of_Finland.svg.png"
+    },
+    {
+        "id": 30,
+        "country": "Latvia",
+        "semifinal": 2,
+        "draw": 15,
+        "artist": "Samanta Tina",
+        "song": "The Moon is Rising",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/45px-Flag_of_Latvia.svg.png"
+    },
+    {
+        "id": 31,
+        "country": "Sveitsi",
+        "semifinal": 2,
+        "draw": 16,
+        "artist": "Gjon's Tears",
+        "song": "Tout l’univers",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/45px-Flag_of_Switzerlanf.svg.png"
+    },
+    {
+        "id": 32,
+        "country": "Tanska",
+        "semifinal": 2,
+        "draw": 17,
+        "artist": "Fyr & Flamme",
+        "song": "Øve os på hinanden",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/45px-Flag_of_Denmark.svg.png"
+    }
+    
+]
