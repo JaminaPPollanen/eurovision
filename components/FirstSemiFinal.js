@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet} from "react-native";
+import { View, Text, FlatList, StyleSheet, Alert} from "react-native";
 import * as eurovisionData from '../eurovision.json';
 import { ListItem, Avatar} from 'react-native-elements';
 import CountDown from 'react-native-countdown-component';
@@ -29,8 +29,8 @@ return(
         <CountDown
             style={{alignItems: 'center'}}
             until={daysTillFinal}
-            onFinish={() => alert('Ensimmäinen semifinaali alkaa!')}
-            onPress={() => alert('Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen ensimmäiseen semifinaaliin!')}
+            onFinish={() => Alert.alert('Euroviisut!','Ensimmäinen semifinaali alkaa!')}
+            onPress={() => Alert.alert('Euroviisut!','Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen ensimmäiseen semifinaaliin!')}
             digitStyle={{backgroundColor: '#fffeff', borderWidth: 2, borderColor: '#fffeff'}}
             digitTxtStyle={{color: '#0251c1'}}
             timeLabelStyle={{color: "#fffeff", paddingBottom: 20}}

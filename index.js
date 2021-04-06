@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View , Image, Button } from 'react-native';
+import { StyleSheet, Text, View , Image, Button, Alert } from 'react-native';
 import CountDown from 'react-native-countdown-component';
 import { ActivityIndicator } from 'react-native';
 
@@ -23,8 +23,8 @@ function Index({navigation}){
                 <CountDown
                     style={{alignItems: 'center'}}
                     until={daysTillFinal}
-                    onFinish={() => alert('Finaali alkaa!')}
-                    onPress={() => alert('Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen finaaliin!')}
+                    onFinish={() => Alert.alert('Euroviisut!', 'Finaali alkaa!')}
+                    onPress={() => Alert.alert('Euroviisut!', 'Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen finaaliin!')}
                     digitStyle={{backgroundColor: '#fffeff', borderWidth: 2, borderColor: '#fffeff'}}
                     digitTxtStyle={{color: '#0251c1'}}
                     timeLabelStyle={{color: "#fffeff", fontFamily: 'Palatino-Bold'}}
@@ -53,6 +53,14 @@ function Index({navigation}){
                         color="#f00d0d"      
                         title="Toinen semifinaali                "
                         onPress={() => navigation.navigate('SecondSemiFinal')}
+                    />
+                </View>
+                <View style={styles.btnstyle}>
+                    <Button
+                        fontFamily= 'Palatino-Bold'
+                        color="#f00d0d"      
+                        title="Omat suosikit                       "
+                        onPress={() => navigation.navigate('Suosikit')}
                     />
                 </View>
             </View>

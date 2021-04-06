@@ -6,6 +6,7 @@ import Index from './index';
 import Esiintyjat from './components/Esiintyjat';
 import FirstSemiFinal from './components/FirstSemiFinal';
 import SecondSemiFinal from './components/SecondSemiFinal';
+import Suosikit from './components/Suosikit';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ export default function App() {
         <Stack.Screen name="Esiintyjat" component={Esiintyjat} />
         <Stack.Screen name="FirstSemiFinal" component={FirstSemiFinal} />
         <Stack.Screen name="SecondSemiFinal" component={SecondSemiFinal} />
+        <Stack.Screen name="Suosikit" component={Suosikit}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
