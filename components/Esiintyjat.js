@@ -1,3 +1,4 @@
+//Imports
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet} from "react-native";
 import * as eurovisionData from '../esiintyjat.json';
@@ -5,9 +6,10 @@ import { ListItem, Avatar} from 'react-native-elements';
 
 
 function Esiintyjat() {
-
+//getting data from local JSON
 const data = Object.values(eurovisionData);
 
+//returns list of countries from json
 const renderItem = ({ item }) => (
     <ListItem 
       bottomDivider
@@ -37,6 +39,8 @@ return(
     </View>
 )
 }
+
+//Styles for the app
 const styles = StyleSheet.create({
     container: {
       flex: 1,

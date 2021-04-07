@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+//Imports
+import React from 'react';
 import { View, Text, FlatList, StyleSheet, Alert} from "react-native";
 import * as eurovisionData from '../eurovision.json';
 import { ListItem, Avatar} from 'react-native-elements';
@@ -6,10 +7,13 @@ import CountDown from 'react-native-countdown-component';
 
 
 function FirstSemiFinal() {
+//Calculating time until first semifinal for the countdown
 const diff = new Date("May 18, 2021").getTime() - new Date().getTime();
 const daysTillFinal = (diff / (1000)) + 75600; //Adding missing 21 hours to starting time
+//Getting data from own json
 const data = Object.values(eurovisionData);
 
+//listing countries in the first semifinal
 const renderItem = ({ item }) => (
     <ListItem 
       bottomDivider
@@ -48,6 +52,8 @@ return(
     </View>
 )
 }
+
+//Styles for the app
 const styles = StyleSheet.create({
     container: {
       flex: 1,

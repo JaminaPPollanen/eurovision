@@ -1,22 +1,29 @@
+//Imports
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, KeyboardAvoidingView, Alert, Text } from 'react-native';
+import { StyleSheet, View, FlatList, KeyboardAvoidingView, Alert, Text , Button} from 'react-native';
 import * as SQLite from 'expo-sqlite';
-import { Button, ListItem, Input} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {ListItem, Input} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/AntDesign';
 
+//creating database for eurovision
 const db = SQLite.openDatabase("eurovisiondb.db")
 
 function Suosikit() {
+
+//Creating variables 
 const [favorites, setFavorites] = useState([]);
 const [country, setCountry] = useState("");
-const [points, setPoints] = useState("");
+const [points, setPoints] = useState(0);
 
+//useEffect is activated when the page is used at the begin
+//Creates or downloads the database
 useEffect(() => {
   db.transaction(tx => {
     tx.executeSql('create table if not exists favorites (id integer primary key not null, country text, points integer);');
   }, null, updateFavorites);
 }, []);
  
+//When called, updates database
 const updateFavorites = () => {
   db.transaction(tx => {
     tx.executeSql('select * from favorites;', [], (_, { rows }) =>
@@ -24,39 +31,47 @@ const updateFavorites = () => {
     );
   })
 }
+
+//Saves added favorite to database
 const saveFavorite = () => {
   db.transaction(tx => {
     tx.executeSql('insert into favorites(country, points) values(?,?);',
     [country, points]);
   }, null, updateFavorites
   )
+  //set inputs to empty
+  setCountry("");
+  setPoints(0);
 }
+
+//Deletes favorite when confirmed
 const deleteFavorite = (id) => {
   db.transaction(tx => {
     tx.executeSql('delete from favorites where id = ?;', [id]);
   }, null, updateFavorites)
 }
 
+//renderItem downloads from database all the saved favorites
 const renderItem = ({ item }) => (
   <ListItem
     bottomDivider
     containerStyle={{backgroundColor: "#060a2f"}}
-    onLongPress={() => Alert.alert("Suosikin poisto", "Haluatko varmasti poistaa suosikin?", 
+    //By long press the app confirms if user is sure about delete, if so favorite is deleted from database
+    onPress={() => Alert.alert("Suosikin poisto", "Haluatko varmasti poistaa suosikin?", 
       [
         {
           text: "Kyllä",
           onPress: () => deleteFavorite(item.id)
         },
         {
-          text: "Peruuta",
-          onPress: () => console.log("Peruuta painettiin")
+          text: "Peruuta"
         }
       ])}>
     <ListItem.Content>
-      <ListItem.Title style={{fontFamily: 'Palatino-Bold', color: "white"}}>{item.country}</ListItem.Title>
-      <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>{item.points}</ListItem.Subtitle>
+      <ListItem.Title style={{fontFamily: 'Palatino-Bold', color: "white"}}>Maa: {item.country}</ListItem.Title>
+      <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>Pisteet: {item.points}</ListItem.Subtitle>
     </ListItem.Content>
-    <ListItem.Chevron name="delete" size={30}/>
+    <Icon name="delete" color="red" size={22}/>
   </ListItem>
 )
   
@@ -66,20 +81,21 @@ return(
     style={styles.container}
     keyboardVerticalOffset={-150}>
     <View style={styles.container}>
-      <Text style={styles.text}>Suosikit</Text>
+      <Text style={styles.title}>Omat suosikkisi</Text>
       <Input style={styles.textinput}
-      placeholder="Maa" label="Maa" onChangeText={country => setCountry(country)}
+      placeholder="Maa" onChangeText={country => setCountry(country)}
       value={country}/>
       <Input style={styles.textinput}
-      placeholder="Pisteet" label="Pisteet" onChangeText={points => setPoints(points)}
+      placeholder="Pisteet" onChangeText={points => setPoints(points)}
       value={points}/>
-      <Button 
-        icon={<Icon
-        name="save"
-        size={22}
-        color="white"
-        />}
-        onPress={saveFavorite} title="Lisää suosikki"/>
+        <View style={styles.btnstyle}>
+          <Button 
+              color="#fffeff"
+              fontFamily= 'Palatino-Bold'
+              title="Lisää suosikkisi"
+              onPress={saveFavorite}
+          />
+        </View>
       <View>
         <FlatList
         keyExtractor={item => item.id.toString()}
@@ -90,6 +106,8 @@ return(
   </KeyboardAvoidingView>
 )
 }
+
+//Styles for the app
 const styles = StyleSheet.create({
     container: {
       flex: 2,
@@ -112,19 +130,20 @@ const styles = StyleSheet.create({
       fontFamily: 'Palatino-Bold'
     },
     btnstyle: {
-        height: 40, 
-        width: "90%", 
-        borderColor: '#4C232B',   
-        borderWidth: 2, 
-        borderRadius: 10,  
-        marginBottom: 10, 
-        fontSize: 18, 
-        backgroundColor: '#C9E2F3',
-        fontFamily: 'Palatino-Bold'
-    },
+      height: 40, 
+      borderColor: '#fffeff',   
+      borderWidth: 2, 
+      borderRadius: 8,  
+      marginBottom: 5, 
+      fontSize: 17, 
+      backgroundColor: '#060a2f',
+      fontFamily: 'Palatino-Bold'
+  },
     textinput: {
       paddingTop: 15,
-      fontSize: 18
+      fontSize: 18,
+      fontFamily: 'Palatino-Bold',
+      color: "#fffeff"
     },
     listcontainer: {
       flex: 4
