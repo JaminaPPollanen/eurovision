@@ -7,3 +7,9 @@ The main features of Eurovision app are:
 3. To add your own favorites and give your own points to countries. 
 
 ![An example of countdown and homepage](./images/gif1.gif)
+
+![An example of countdown and homepage](./images/gif2.gif)
+
+![An example of countdown and homepage](./images/gif3.gif)
+
+![An example of countdown and homepage](./images/gif4.gif)
