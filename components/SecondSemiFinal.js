@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
       color:"white", 
       textAlign:"center", 
       fontSize: 16,
-      fontFamily: 'Palatino-Bold'
+      fontFamily: 'Palatino-Bold',
+      paddingBottom: 10
     },
     btnstyle: {
         height: 40, 

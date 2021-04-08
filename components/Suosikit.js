@@ -4,6 +4,7 @@ import { StyleSheet, View, FlatList, KeyboardAvoidingView, Alert, Text , Button}
 import * as SQLite from 'expo-sqlite';
 import {ListItem, Input} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
+import { StepLabel } from '@material-ui/core';
 
 //creating database for eurovision
 const db = SQLite.openDatabase("eurovisiondb.db")
@@ -51,6 +52,7 @@ const deleteFavorite = (id) => {
   }, null, updateFavorites)
 }
 
+
 //renderItem downloads from database all the saved favorites
 const renderItem = ({ item }) => (
   <ListItem
@@ -60,7 +62,7 @@ const renderItem = ({ item }) => (
     onPress={() => Alert.alert("Suosikin poisto", "Haluatko varmasti poistaa suosikin?", 
       [
         {
-          text: "Kyllä",
+          text: "Poista",
           onPress: () => deleteFavorite(item.id)
         },
         {
@@ -96,7 +98,7 @@ return(
               onPress={saveFavorite}
           />
         </View>
-      <View>
+      <View style={styles.listcontainer}>
         <FlatList
         keyExtractor={item => item.id.toString()}
         renderItem={renderItem}
@@ -146,7 +148,8 @@ const styles = StyleSheet.create({
       color: "#fffeff"
     },
     listcontainer: {
-      flex: 4
+      flex: 3,
+      paddingBottom: 1
     }
   });
 export default Suosikit;

@@ -17,8 +17,7 @@ const renderItem = ({ item }) => (
       <Avatar source={{uri: item.flag}} height={24} width={40}/>
       <ListItem.Content >
         <ListItem.Title style={{fontFamily: 'Palatino-Bold', color: "white", fontSize: 20}}>{item.country}</ListItem.Title>
-        <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>Esiintyjä: {item.artist}</ListItem.Subtitle>
-        <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>Laulu: {item.song}</ListItem.Subtitle>
+        <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>{item.artist} - {item.song}</ListItem.Subtitle>
         <ListItem.Subtitle style={{fontFamily: 'Palatino-Bold', color: "white"}}>Semifinaali: {item.semifinal}</ListItem.Subtitle>
       </ListItem.Content>
     </ListItem>
