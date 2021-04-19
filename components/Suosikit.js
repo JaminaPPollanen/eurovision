@@ -4,7 +4,6 @@ import { StyleSheet, View, FlatList, KeyboardAvoidingView, Alert, Text , Button}
 import * as SQLite from 'expo-sqlite';
 import {ListItem, Input} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { StepLabel } from '@material-ui/core';
 
 //creating database for eurovision
 const db = SQLite.openDatabase("eurovisiondb.db")
@@ -14,13 +13,13 @@ function Suosikit() {
 //Creating variables 
 const [favorites, setFavorites] = useState([]);
 const [country, setCountry] = useState("");
-const [points, setPoints] = useState(0);
+const [points, setPoints] = useState("");
 
 //useEffect is activated when the page is used at the begin
 //Creates or downloads the database
 useEffect(() => {
   db.transaction(tx => {
-    tx.executeSql('create table if not exists favorites (id integer primary key not null, country text, points integer);');
+    tx.executeSql('create table if not exists favorites (id integer primary key not null, country text, points text);');
   }, null, updateFavorites);
 }, []);
  
@@ -86,10 +85,10 @@ return(
       <Text style={styles.title}>Omat suosikkisi</Text>
       <Input style={styles.textinput}
       placeholder="Maa" onChangeText={country => setCountry(country)}
-      value={country}/>
+      value={country.toString()}/>
       <Input style={styles.textinput}
       placeholder="Pisteet" onChangeText={points => setPoints(points)}
-      value={points}/>
+      value={points.toString()}/>
         <View style={styles.btnstyle}>
           <Button 
               color="#fffeff"
