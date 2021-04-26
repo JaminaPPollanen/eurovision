@@ -35,7 +35,7 @@ return(
             style={{alignItems: 'center'}}
             until={daysTillFinal}
             onFinish={() => Alert.alert('2. semifinaali', 'Toinen semifinaali alkaa!')}
-            onPress={() => alert('Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen toiseen semifinaaliin!')}
+            onPress={() => Alert.alert('2. semifinaali!', 'Lähtölaskenta kertoo tarkalleen kuinka kauan aikaa on jäljellä Euroviisujen toiseen semifinaaliin!')}
             digitStyle={{backgroundColor: '#fffeff', borderWidth: 2, borderColor: '#fffeff'}}
             digitTxtStyle={{color: '#0251c1'}}
             timeLabelStyle={{color: "#fffeff", paddingBottom: 20}}
