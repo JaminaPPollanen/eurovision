@@ -15,8 +15,8 @@ The main features of the app are the following:
 ![An example of countdown and homepage](./images/gif3.gif)
 
 # How can I use the Eurovision App?
-You can start using eurovision app by Expo.io. Steps to take before seeing app on you phone:
+You can start using eurovision app by Expo.io. Unfortunately this app only works with Android phones. Steps to take before seeing app on you phone:
 1. Download Expo.io from App Store or Google Play.
-2. Open the app and scan the QR-code.
+2. Open the camera or other application to read QR-code from the website: https://expo.io/@jaminapollanen/projects/eurovisionapp.
 3. Wait for the app to download.
-4. Enjoy your usage!
+4. Enjoy!
